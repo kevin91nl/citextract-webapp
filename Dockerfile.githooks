@@ -1,0 +1,3 @@
+FROM busybox:latest
+
+ENTRYPOINT sh -c "cd /tmp/hooks && ls | xargs chmod +x && cp /tmp/hooks/* /tmp/.git/hooks/ && echo 'Githooks installed!'"

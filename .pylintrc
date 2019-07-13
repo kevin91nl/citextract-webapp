@@ -1,0 +1,11 @@
+[FORMAT]
+max-line-length=120
+
+[MASTER]
+load-plugins = pylint.extensions.docparams,pylint_django
+
+[MESSAGES CONTROL]
+disable=W0221,R0903,I1101,R0901,W0703,R0801
+
+[BASIC]
+good-names=default_app_config,local_logger_conf,router

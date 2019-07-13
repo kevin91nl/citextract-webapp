@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Executing pre-commit hook..."
+docker-compose build webapp
+docker-compose run --rm webapp make check

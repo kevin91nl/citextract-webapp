@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://www.citextract.com/sitemap-pages.xml

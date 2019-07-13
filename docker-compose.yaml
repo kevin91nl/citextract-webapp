@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  githooks:
+    build:
+      context: .
+      dockerfile: Dockerfile.githooks
+    volumes:
+      - ./.git:/tmp/.git
+      - ./hooks:/tmp/hooks
+
+  webapp:
+    image: kevin91nl/citextract
+    build: .
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
+    ports:
+      - "8000:8000"
